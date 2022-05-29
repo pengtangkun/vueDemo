@@ -2,18 +2,19 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>hello world</title>
+		<title>控制元素显示</title>
 		<script src="vue.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<div id="app">
-			{{message}}
+		<div id="app-3">
+			<p v-if="seen">now i see you!</p>
 		</div>
+
 		<script type="text/javascript">
-			var app = new Vue({
-				el: '#app',
+			var app3 = new Vue({
+				el: "#app-3",
 				data: {
-					message: 'hello world!'
+					seen: true
 				}
 			});
 		</script>

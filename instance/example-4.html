@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>实例生命周期钩子</title>
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="example">
+			<p>{{a}}</p>
+		</div>
+		<script type="text/javascript">
+			var data = {
+				a: "hello...v",
+			};
+			var vm = new Vue({
+				el: "#example",
+				data: data,
+				created: function() {
+					console.log('a is ' + this.a)
+				}
+			});
+		</script>
+	</body>
+</html>

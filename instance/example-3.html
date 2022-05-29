@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自带实例api方法</title>
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="example">
+			<p>a：{{a}}</p>
+		</div>
+		<script type="text/javascript">
+			var data = {
+				a: 1,
+			};
+			var vm = new Vue({
+				el: "#example",
+				data: data
+			});
+
+			//vm.$el === document.getElementById('example')
+			vm.$watch('a', function(newValue, oldValue) {
+				console.log(newValue, '\n',oldValue)
+			});
+
+			vm.$data.a = "data,test"
+		</script>
+	</body>
+</html>

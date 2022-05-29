@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据变量声明</title>
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			a：{{a}}---b：{{b}}
+		</div>
+		<script type="text/javascript">
+			var data = {
+				a: 1,
+			};
+			var vm = new Vue({
+				el: "#app",
+				data: data
+			});
+			data.a = "hi....V"
+			vm.a="hell...vm.."
+			data.b="hi...b"
+		</script>
+	</body>
+</html>

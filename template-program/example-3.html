@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue中的javaScript表达式应用</title>
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-bind:class="math">数学运算：{{number}}+123={{number+123}}</p>
+			<p v-bind:class="other">{{ok?'YES':'NO'}}</p>
+			<p v-bind:class="other">{{ message.split('').reverse().join('') }}</p>
+			<button v-on:click="math='lanse'">点击将运算变为蓝色主题</button>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					math: 'hongse',
+					other: 'lanse',
+					number: 22,
+					ok: false,
+					message: 'hello...kun',
+				}
+			})
+		</script>
+		<style type="text/css">
+			.hongse {
+				color: red;
+			}
+
+			.lanse {
+				color: blue;
+				font-size: 20px;
+			}
+		</style>
+	</body>
+</html>

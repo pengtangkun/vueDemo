@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>插值-原始html</title>
+		<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>使用用双大括号语法输出文本：{{rawHtml}}</p>
+			<p>适用v-html语法输出原始html：<span v-html="rawHtml"></span></p>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					rawHtml:'<span style="color:red">这个应该是红色</span>'
+				}
+			})
+		</script>
+	</body>
+</html>
